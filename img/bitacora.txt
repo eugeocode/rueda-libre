@@ -1,7 +1,7 @@
 url: http://127.0.0.1:5500/favicon.ico
 protocolo: HTTP/1.1
 host: 127.0.0.1:5500
-Puerto: 127.0.0.1:5500
+Puerto: :5500
 Metodo: GET
 Estado: 200
 
