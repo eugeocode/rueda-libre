@@ -78,3 +78,5 @@ reservas → correo
 origen:reservas
 destino: correp
 ruta: mailto: hola@ruedalibre.example
+
+plan y politicas decidi colocarlas en type radio debido a que anteriormente ya habia usado select
