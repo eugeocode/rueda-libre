@@ -1,0 +1,82 @@
+url: http://127.0.0.1:5500/favicon.io
+protocolo: HTTP/1.1
+host: 127.0.0.1:5500
+Puerto: :5500
+Metodo: GET
+Estado: 200
+
+HTML:
+CSS:
+JAVASCRIPT:
+
+INDEX
+index → index
+origen: index
+destino: index
+ruta: index.html
+
+index → tarifas
+origen: index
+destino tarifas
+ruta: /paginas/tarifas.html
+
+index → reservas
+origen: index
+destino: reservas
+ruta: /paginas/reservas.html
+
+index → tarifas (tabla 2)
+oringe: index
+destino: tarifas (tabla 2)
+ruta: /paginas/tarifas.html#recorridos
+
+index → correo
+origen: index
+destino: correo
+ruta: mailto: hola@ruedalibre.example
+
+TARIFAS 
+
+tarifas → inicio
+origen: tarifas
+destino: inicio
+ruta: ../index.html
+
+tarifas → tarifas
+origen:tarifas
+destino: tarifas
+ruta: tarifas.html
+
+tarifas → reservas
+origen: tarifas
+destino: reservas
+ruta: reservas.html
+
+tarifas → correo
+origen: tarifas
+destino: correo
+ruta: mailto: hola@ruedalibre.example
+
+RESERVAS 
+
+reservas → inicio
+origen:reservas
+destino: inicio
+ruta: ../index.html
+
+reservas → tarifas
+origen:reservas
+destino: tarifas
+ruta: tarifas.html
+
+reservas → reservas
+origen:reservas
+destino: reservas
+ruta: reservas.html
+
+reservas → correo
+origen:reservas
+destino: correp
+ruta: mailto: hola@ruedalibre.example
+
+plan y politicas decidi colocarlas en type radio debido a que anteriormente ya habia usado select

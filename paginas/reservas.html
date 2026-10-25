@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina con las reservas de rueda-libre">
+    <link rel="icon" type="image/png" href="../img/logo12.png">
+    <title>Reservas rueda-libre</title>
+</head>
+<body>
+    <header>
+    <nav>
+    <td>
+        <a href="index.html" style="font-size: 20px; margin-bottom: 30px;">inicio</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+        <a href="tarifas.html" style="font-size: 20px;">tarifas</a>
+    </td>
+</nav>
+    <h1>Rueda Libre</h1>
+    </header>
+    <main>
+    <img src="../img/logo12.png" alt="logo de la compañia" width="200" height="200">
+    <section>
+    <h2>¿Quienes Somos?</h2>
+                <p>Somos un equipo apasionado por el ciclismo urbano y de aventura, dedicados a conectar a las personas con su entorno a través de un servicio completo de <strong>alquiler de bicicletas</strong> y <strong>recorridos guiados</strong> diseñados para descubrir la ciudad de forma única. En cada aventura, garantizamos tu tranquilidad con equipamiento de primera que siempre <strong>incluye casco y candado</strong>, respaldado por un <strong>taller básico</strong> listo para solucionar cualquier imprevisto técnico; porque para nosotros, más allá de moverte de un punto a otro, acompañarte a pedalear con total seguridad es nuestra verdadera prioridad.</p>
+                </section>
+                
+    <form action="#" method="post">
+        <fieldset>
+        <h3>Formulario de reserva</h3>
+        <strong>Tus datos</strong>
+        <br></br>
+            <label for="Nombre">
+                <legend>Nombre completo:</legend>
+            </label>
+            <input type="text" id="Nombre" name="nombre" required minlength="3" title="Minimo de 3 digitos">
+        <br></br>
+            <label for="id">
+                <legend>Numero de documento:</legend>
+            </label>
+            <input type="text" id="id" name="numero de documento" required pattern="[0-9]{6,10}" title="solo numeros, digitos entre 6 y 10">
+        <br></br>
+            <label for="email">
+                <legend>Correo Electronico:</legend>
+            </label>
+            <input type="email" id="email" name="email" required>
+        <br></br>
+            <label for="number">
+                <legend>Celular:</legend>
+                <input type="tel" id="number" name="numero celular" required pattern="3[0-9]{9}" title="Debe iniciar con 3 y tener 9 digitos">
+            </label>
+        </fieldset>
+        <fieldset>
+            <strong>Tu alquiler</strong>
+            <br></br>
+            <label for="date">
+                <legend>Fecha del alquiler:</legend>
+                <input type="date" id="date" name="fecha" required min="2026-11-01" max="2026-12-31">
+            </label>
+        <br></br>
+            <label for="type">
+                <legend>Tipo de bicicleta:</legend>
+            </label>
+            <select name="opciones" id="type" required>
+                    <option value=""></option>
+                    <option value="urbana">urbana</option>
+                    <option value="Montaña">montaña</option>
+                    <option value="Electrica">Electrica</option>
+                </select>
+        <br></br>
+            <legend>Plan:</legend>
+            <input type="radio" id="opc1" name="plan" value="opcion1" required>
+            <label for="opc1">1 hora</label>
+            <br>
+            <input type="radio" id="opc2" name="plan" value="opcion2" required>
+            <label for="opc2">Media dia</label>
+            <br>
+            <input type="radio" id="opc3" name="plan" value="opcion3" required>
+            <label for="opc3">Dia completo</label>
+        <br></br>
+            <label for="cantidad">
+                <legend>Cantidad de bicicletas:</legend>
+                <input type="number" id="cantidad" required min="1" max="6" title="1, maximo 6">
+            </label>
+        <br></br>
+            <label for="ruta">
+                <legend>Recorrido guiado:</legend>
+            </label>
+            <select name="opciones2" id="ruta">
+                <option value=""></option>
+                <option value="Rio">Rio y parques</option>
+                <option value="Barrio">Sabores de barrio</option>
+                <option value="Reto">Reto las palmas</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <strong>Confirmacion</strong>
+            <br></br>
+            <label for="comentario">
+                <legend>Comentario:</legend>
+            </label>
+            <textarea id="comentario" name="comentarios" rows="4" cols="50" maxlength="300"></textarea>
+        <br></br>
+            <legend>Aceptas la politica de alquiler?:</legend>
+            <input type="checkbox" id="politica" name="politica" title="no puede avanzar sin aceptar la politica" required>
+            <label for="politica">Acepto las políticas de alquiler</label>
+            <br><br>
+            <button type="submit" style="font-size: 20px;">Mandar tus respuestas</button>
+        </fieldset>
+    </form>
+                <aside> 
+        <h2>Nuestro Horario</h2>
+    <dl>
+        <dt>Entre semana</dt>
+        <dd>8AM → 5PM</dd>
+        <dt>Fines de semana y festivos</dt>
+        <dd>6AM → 2PM</dd>
+    </dl>
+    </aside> 
+</main>
+<footer>
+<strong>Rueda libre</strong>
+<h2>Contactanos</h2>
+    <a href="mailto:hola@ruedalibre.example" target="_blank">Nuestro correo</a>
+    <h2>Encuentranos</h2>
+            <a href="https://maps.app.goo.gl/HM8SbmrMaXPNHkzv6" target="_blank">Nuestra ubicacion</a>
+            <p>© 2026 Rueda libre</p>
+            </footer>
+</body>
+</html>
