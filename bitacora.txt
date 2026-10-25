@@ -80,3 +80,5 @@ destino: correp
 ruta: mailto: hola@ruedalibre.example
 
 plan y politicas decidi colocarlas en type radio debido a que anteriormente ya habia usado select
+
+El dia de hoy sabado, agregue todas las condiciones requeridas del formulario y las probe, todas funcionando como deben

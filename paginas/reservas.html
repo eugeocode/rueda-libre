@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilo.css">
     <meta name="description" content="Pagina con las reservas de rueda-libre">
     <link rel="icon" type="image/png" href="../img/logo12.png">
     <title>Reservas rueda-libre</title>
@@ -63,56 +64,11 @@
                 <legend>Tipo de bicicleta:</legend>
             </label>
             <select name="opciones" id="type" required>
-                    <option value=""></option>
-        <p></p>
-        <div>
-            <label for="Nombre">
-                <legend>Nombre completo:</legend>
-            </label>
-            <input type="text" id="Nombre">
-        </div>
-        <p></p>
-        <div>
-            <label for="id">
-                <legend>Numero de documento:</legend>
-            </label>
-            <input type="text" id="id">
-        </div>
-        <p></p>
-        <div>
-            <label for="email">
-                <legend>Correo Electronico:</legend>
-            </label>
-            <input type="email" id="email">
-        </div>
-        <p></p>
-        <div>
-            <label for="number">
-                <legend>Celular:</legend>
-                <input type="tel" id="number">
-            </label>
-        </div>
-        </fieldset>
-        <fieldset>
-        <div>
-            <strong>Tu alquiler</strong>
-            <p></p>
-            <label for="date">
-                <legend>Fecha del alquiler:</legend>
-                <input type="date" id="date">
-            </label>
-        </div>
-        <p></p>
-        <div>
-            <label for="type">
-                <legend>Tipo de bicicleta:</legend>
-            </label>
-            <select name="opciones" id="type">
-                    <option value="null"></option>
-                    <option value="urbana">urbana</option>
-                    <option value="Montaña">montaña</option>
-                    <option value="Electrica">Electrica</option>
-                </select>
+                <option value=""></option>
+                <option value="urbana">urbana</option>
+                <option value="montaña">montaña</option>
+                <option value="electrica">electrica</option>
+            </select>
         <br></br>
             <legend>Plan:</legend>
             <input type="radio" id="opc1" name="plan" value="opcion1" required>
@@ -129,34 +85,11 @@
                 <input type="number" id="cantidad" required min="1" max="6" title="1, maximo 6">
             </label>
         <br></br>
-        </div>
-        <p></p>
-        <div>
-            <legend>Plan:</legend>
-            <input type="radio" id="opc1" name="plan" value="opcion1">
-            <label for="opc1">1 hora</label>
-            <br>
-            <input type="radio" id="opc2" name="plan" value="opcion2">
-            <label for="opc2">Media dia</label>
-            <br>
-            <input type="radio" id="opc3" name="plan" value="opcion3">
-            <label for="opc3">Dia completo</label>
-        </div>
-        <p></p>
-        <div>
-            <label for="cantidad">
-                <legend>Cantidad de bicicletas:</legend>
-                <input type="number" id="cantidad">
-            </label>
-        </div>
-        <p></p>
-        <div>
             <label for="ruta">
                 <legend>Recorrido guiado:</legend>
             </label>
             <select name="opciones2" id="ruta">
                 <option value=""></option>
-                <option value="null"></option>
                 <option value="Rio">Rio y parques</option>
                 <option value="Barrio">Sabores de barrio</option>
                 <option value="Reto">Reto las palmas</option>
@@ -175,28 +108,6 @@
             <label for="politica">Acepto las políticas de alquiler</label>
             <br><br>
             <button type="submit" style="font-size: 20px;">Mandar tus respuestas</button>
-        </div>
-        </fieldset>
-        <fieldset>
-        <div>
-            <strong>Confirmacion</strong>
-            <p></p>
-            <label for="comentario">
-                <legend>Comentario:</legend>
-            </label>
-            <textarea id="comentario" name="comentarios" rows="4" cols="50"></textarea>
-        </div>
-        <p></p>
-        <div>
-            <legend>Aceptas la politica de alquiler?:</legend>
-            <input type="radio" id="op1" name="politica" value="op1">
-            <label for="op1">Si</label>
-            <br>
-            <input type="radio" id="op2" name="politica" value="op2">
-            <label for="op2">No</label>
-            <p></p>
-            <button type="submit" style="font-size: 20px;">Mandar tus respuestas</button>
-        </div>
         </fieldset>
     </form>
                 <aside> 
