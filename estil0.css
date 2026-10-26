@@ -1,25 +1,33 @@
+:root {
+  --fuente-titulos: 'Montserrat', Arial, sans-serif;
+  --fuente-texto: 'Open Sans', sans-serif;
+  
+  --color-crema: #FAF6EF;
+  --color-gris-asfalto: #333333;
+}
 body {
-  background-color: #FAF6EF;
-  a {
+  background-color: var(--color-crema);
+  color: var(--color-gris-asfalto);
+  font-family: var(--fuente-texto); 
+  line-height: 1.6;
+  margin: 0;
+}
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+}
+a {
   color: #1E7A4F; 
   text-decoration: none;
 }
-button{
-    color: #1E7A4F
+button {
+  color: #1E7A4F;
 }
-h1{
-    color: 	#14213D
+h1, header {
+  color: #14213D;
 }
-header{
-    color: 	#14213D
+h2, strong {
+  color: #F39A2B;
 }
-strong{
-    color: #F39A2B
-}
-h2{
-    color: #F39A2B
-}
-h3{
-    color: 	#5B6470
-}
+h3 {
+  color: #5B6470;
 }
