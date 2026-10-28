@@ -173,3 +173,12 @@ tbody tr:hover th {
   justify-content: space-between;
   gap: 2rem;
 }
+#whatsapp{
+  position:fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 9999;
+}
+#whatsapp img{
+  width: 5rem;
+}
