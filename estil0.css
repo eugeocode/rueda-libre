@@ -68,6 +68,15 @@ color:var(--color-gris-asfalto);
 }
 .btn-reservar:hover { background-color: #14213D; }
 .btn-reservar:focus { outline: 3px dashed #F39A2B; outline-offset: 4px; }
+.btn-tarifas {
+  background-color: #1E7A4F; 
+    color: #FAF6EF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.btn-tarifas:hover { background-color: #14213D; }
+.btn-tarifas:focus { outline: 3px dashed #F39A2B; outline-offset: 4px; }
 .btn-contactanos {
   display: flex;
     background-color: #FFFBA8; 
@@ -144,5 +153,23 @@ tbody tr:hover th {
   display: flex;               
   align-items: center;         
   justify-content: space-between; 
+  gap: 2rem;
+}
+.nuestros-servicios{
+  display:flex;
+  align-items: center;
+  justify-content: left;
+  gap: 2rem;
+}
+.alquilar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.horario{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 2rem;
 }

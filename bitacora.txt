@@ -87,4 +87,4 @@ El dia de hoy lunes 26 de octubre arregle bastantes problemas comunes y intente 
 
 El dia martes añadi el foco en la navegacion con apoyo en la ia
 
-
+El dia miercoles añadi todo lo de los bordes y los rellenos con ayuda de mis amigos y un poco de apoyo en inteligencia artificial
