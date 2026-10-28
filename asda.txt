@@ -1,0 +1,20 @@
+<header>
+        <nav>
+            <ul id="menu">
+                <li><a href="tarifas.html" class="activo">Tarifas</a></li> &nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="reservas.html" class="activo">Reservas</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="../index.html" class="activo">Inicio</a></li>
+            </ul>
+    </nav>
+    <h1>Tarifas de rueda libre</h1>
+    <p></p>
+        <img src="../img/logo12.png" alt="logo de la compañia" width="200" height="200">
+        <ol>
+            <li>
+                <a href="#seccion-bicicletas">ir a tarifas de bicicletas</a>
+            </li>
+            <li>
+                <a href="#seccion-recorridos">ir a tarifas de recorridos</a>
+            </li>
+        </ol>
+        </header>

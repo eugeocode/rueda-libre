@@ -84,3 +84,7 @@ plan y politicas decidi colocarlas en type radio debido a que anteriormente ya h
 El dia de hoy sabado, agregue todas las condiciones requeridas del formulario y las probe, todas funcionando como deben
 
 El dia de hoy lunes 26 de octubre arregle bastantes problemas comunes y intente arreglar las fuentes pero me vi incapaz de ayuda de muchos amigos, por ese motivo utilice la ia de gemini mandandole solo mi archivo css para que lo analizara y encontrara solucion, a lo que modifico algunas posiciones de mi codigo y agrego unas cosas mas
+
+El dia martes añadi el foco en la navegacion con apoyo en la ia
+
+
