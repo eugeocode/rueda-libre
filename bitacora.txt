@@ -87,4 +87,6 @@ El dia de hoy lunes 26 de octubre arregle bastantes problemas comunes y intente 
 
 El dia martes añadi el foco en la navegacion con apoyo en la ia
 
-El dia miercoles añadi todo lo de los bordes y los rellenos con ayuda de mis amigos y un poco de apoyo en inteligencia artificial, mejore mucho el diseño de la web aparte de mejorar los botones y los centrados de los textos
+El dia miercoles añadi todo lo de los bordes y los rellenos con ayuda de mis amigos y un poco de apoyo en inteligencia artificial, mejore mucho el diseño de la web aparte de mejorar los botones y los centrados de los textos, tambien agregue el boton nuevo de whatsapp con ayuda de samuel (gracias por tu gran ayuda eres el mejor)
+
+toda semana uno acabo en la version 3.0

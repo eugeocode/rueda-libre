@@ -44,7 +44,7 @@ h1, h2, h3 {
   text-align: center;
 }
 #menu a{
-color:var(--color-gris-asfalto);
+color: #FFFBA8;
 }
 #menu a.activo{
   color: var(--color-verde-ruta);
