@@ -240,6 +240,9 @@ tbody tr:hover th {
 }
 
 .tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   flex: 1 1 16rem;
   min-width: 0;
@@ -256,4 +259,12 @@ tbody tr:hover th {
   border: 1px solid var(--color-gris-asfalto);
   border-radius: 0.75rem;
   background-color: var(--color-crema);
+}
+.flota{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.flota article{
+  display: flex;
+  flex-direction: column;
 }
