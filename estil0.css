@@ -1,3 +1,10 @@
+/* =========================================================
+   RUEDA LIBRE - CSS mobile first
+   Base = teléfono. Luego se amplía con:
+   - Tableta:     min-width: 48rem  (768px)
+   - Computador:  min-width: 64rem  (1024px)
+   ========================================================= */
+
 :root {
   --fuente-titulos: "Montserrat", Arial, sans-serif;
   --fuente-texto: "Open Sans", sans-serif;
@@ -5,6 +12,8 @@
   --color-crema: #faf6ef;
   --color-gris-asfalto: #333333;
   --color-verde-oscuro: #1e7a4f;
+  --color-verde-ruta: #F8F4ED;
+  --borde-suave: rgba(250, 246, 239, 0.35);
 
   --espacio-m: 1.5rem;
   --espacio-md: 2rem;
@@ -15,70 +24,66 @@
   --espacio-5: 2rem;
   --espacio-6: 3rem;
 }
+
+/* ---------- Base (teléfono) ---------- */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Imágenes (teléfono) ----------
+   Antes tenían width/height en el HTML; ahora el tamaño lo controla el CSS.
+   Se mantienen cuadradas como en el diseño original (200x200, 300x300, 100x100). */
+
+/* Flota: 200x200 */
+.flota article img {
+  width: 100%;
+  max-width: 12.5rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  align-self: center;
+}
+
+/* Rutas: 300x300 */
+.rutas article img {
+  width: 100%;
+  max-width: 18.75rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  align-self: center;
+}
+
+/* Quiénes somos, servicios y cómo alquilar: 300x300 */
+.quienes-somos img,
+.nuestros-servicios img,
+.alquilar img {
+  width: 100%;
+  max-width: 18.75rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Reloj del horario: 100x100 */
+.Horario img {
+  width: 6.25rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 body {
   background-color: var(--color-gris-asfalto);
-
   font-family: var(--fuente-texto);
   line-height: 1.6;
   margin: 0;
   padding: 0;
   color: #F8F4ED;
 }
+
 main {
-  padding: 1rem 2rem;
+  padding: 1rem;
   max-width: 100rem;
-  margin: 5rem 2rem;
-}
-
-header {
-  color: var(--color-crema);
-  background-color: #1e7a4f;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.encabezado {
-  flex-direction: column;
-  text-align: center;
-  flex-wrap: wrap;
-}
-header section {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-nav {
-  display: flex;
-  margin: 4rem;
-  flex-wrap: wrap;
-  gap: var(--espacio-m);
-}
-footer {
-  display: flex;
-  color: var(--color-crema);
-  background-color: #1e7a4f;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: var(--espacio-5);
-  margin-top: var(--espacio-6);
-  padding: var(--espacio-4) 0;
-  border-top: 1px solid var(--borde-suave);
-  text-align: left;
-}
-
-.Marca {
-  flex-wrap: wrap;
-  padding: 1rem 5rem;
-}
-.Contacto {
-  padding: 3rem;
-}
-
-.Horario {
-  padding: 2rem 9rem;
+  margin: 2rem 0;
 }
 
 h1,
@@ -87,6 +92,59 @@ h3 {
   font-family: var(--fuente-titulos);
   text-align: center;
 }
+
+h1 {
+  font-size: 1.6rem;
+}
+
+/* ---------- Encabezado ---------- */
+
+header {
+  color: var(--color-crema);
+  background-color: #1e7a4f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.encabezado {
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.encabezado img {
+  width: 7.5rem;
+  height: auto;
+}
+
+header section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  margin: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espacio-m);
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espacio-3);
+  list-style: none;
+  margin: 0rem;
+  padding: 0;
+}
+
 #menu a {
   color: #fffba8;
 }
@@ -94,7 +152,6 @@ h3 {
   color: var(--color-verde-ruta);
   font-weight: 600;
 }
-
 #menu a:hover {
   color: #fffba8;
   text-decoration: underline;
@@ -103,6 +160,9 @@ h3 {
   outline: 3px solid #1e7a4f;
   outline-offset: 4px;
 }
+
+/* ---------- Botones ---------- */
+
 .btn-reservar {
   background-color: #1e7a4f;
   color: #faf6ef;
@@ -117,6 +177,7 @@ h3 {
   outline: 3px dashed #f39a2b;
   outline-offset: 4px;
 }
+
 .btn-tarifas {
   background-color: #1e7a4f;
   color: #faf6ef;
@@ -131,6 +192,7 @@ h3 {
   outline: 3px dashed #f39a2b;
   outline-offset: 4px;
 }
+
 .btn-contactanos {
   background-color: #fffba8;
   color: #1e7a4f;
@@ -138,6 +200,7 @@ h3 {
   border-radius: 5px;
   text-decoration: none;
   height: 40px;
+  margin-bottom: 1rem;
 }
 .btn-contactanos:hover {
   background-color: #1e7a4f;
@@ -147,32 +210,57 @@ h3 {
   outline: 3px dashed #1e7a4f;
   outline-offset: 4px;
 }
+
 input:focus,
 textarea:focus {
   outline: 3px solid #1e7a4f;
   border-color: transparent;
-}
-#menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--espacio-md);
-  list-style: none;
-  margin: 0rem;
-  padding: 0;
 }
 
 .p {
   padding: 10px 25px;
 }
 
+/* ---------- Pie de página ---------- */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-crema);
+  background-color: #1e7a4f;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: var(--espacio-3);
+  margin-top: var(--espacio-6);
+  padding: var(--espacio-4) 0;
+  border-top: 1px solid var(--borde-suave);
+  text-align: center;
+}
+
+.Marca {
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.Contacto {
+  padding: 1rem;
+}
+.Horario {
+  padding: 1rem;
+}
+
+/* ---------- Tablas ---------- */
+
 table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
   margin: 20px auto;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--color-verde-oscuro);
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   color: #333333;
 }
@@ -186,17 +274,17 @@ caption {
 thead th {
   background-color: var(--color-verde-oscuro);
   color: rgb(28, 0, 0);
-  padding: 12px 16px;
+  padding: 8px 10px;
 }
 
 tbody th {
   background-color: #1e7a4f;
   text-align: left;
-  padding: 10px 16px;
+  padding: 8px 10px;
 }
 
 td {
-  padding: 10px 16px;
+  padding: 8px 10px;
   background-color: #fffba8;
 }
 
@@ -209,30 +297,24 @@ tbody tr:hover th {
   background-color: #915080;
 }
 
-.quienes-somos {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-.nuestros-servicios {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  gap: 2rem;
-}
-.alquilar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
+/* ---------- Secciones en fila (apiladas en teléfono) ---------- */
+
+.quienes-somos,
+.nuestros-servicios,
+.alquilar,
 .horario {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
+
+.nuestros-servicios {
+  justify-content: left;
+}
+
+/* ---------- WhatsApp ---------- */
+
 #whatsapp {
   position: fixed;
   right: 10px;
@@ -240,8 +322,10 @@ tbody tr:hover th {
   z-index: 9999;
 }
 #whatsapp img {
-  width: 5rem;
+  width: 3.5rem;
 }
+
+/* ---------- Tarjetas ---------- */
 
 .tarjeta {
   display: flex;
@@ -250,86 +334,91 @@ tbody tr:hover th {
   position: relative;
   flex: 1 1 16rem;
   min-width: 0;
-  padding: var(--espacio-md);
+  padding: var(--espacio-3);
   border: 1px solid var(--color-gris-asfalto);
   border-radius: 0.75rem;
   background-color: var(--color-crema);
   color: #333333;
 }
+
 .tarjetaServicios {
   position: relative;
   flex: 1 1 16rem;
   min-width: 0;
-  padding: var(--espacio-md);
+  padding: var(--espacio-3);
   border: 1px solid var(--color-gris-asfalto);
   border-radius: 0.75rem;
   background-color: var(--color-crema);
 }
-.flota{
+
+/* ---------- Flota y rutas (1 columna en teléfono) ---------- */
+
+.flota,
+.rutas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
 }
-.flota article{
+
+.flota article,
+.rutas article {
   display: flex;
   flex-direction: column;
 }
 
-.portada{
+/* ---------- Portada ---------- */
+
+.portada {
   background-color: #F8F4ED;
   color: #333333;
   justify-content: space-between;
 
-  background-image: url(/img/Portada.jpeg);
+  background-image: url(img/Portada.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
-  
-  padding: 0 4rem; 
-  box-sizing: border-box; 
 
-  width: 100vw;       
-  min-height: 100vh;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 
-  padding-left: 5rem;
+  width: 100%;
+  min-height: 80vh;
 }
-.portada div{
+
+.portada div {
   max-width: 500px;
 }
 
-.rutas{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-.rutas article{
-  display: flex;
-  flex-direction: column;
-}
+/* ---------- Enlaces ---------- */
 
-a, a:visited {
-  color: #EADCB9; 
+a,
+a:visited {
+  color: #EADCB9;
 }
 a:hover {
   color: #237B52;
 }
 
+/* ---------- Formulario (1 columna en teléfono) ---------- */
+
 .formulario {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   align-items: start;
 }
 
-.form1{
+.form1 {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0;
   width: 100%;
 }
 
-.form1-doble{
+.form1-doble {
   flex: 1;
 }
 
@@ -356,9 +445,222 @@ a:hover {
 }
 
 fieldset {
-  padding: 1.5rem;
+  min-width: 0;
+  padding: 1rem;
   border: 1px solid var(--color-crema);
   border-radius: 8px;
   box-sizing: border-box;
 }
 
+/* =========================================================
+   TABLETA  (≥ 768px)
+   ========================================================= */
+@media (min-width: 48rem) {
+  main {
+    padding: 1rem 1.5rem;
+    margin: 3rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* Encabezado en fila */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .encabezado img {
+    width: 9rem;
+  }
+
+  header section {
+    justify-content: flex-start;
+  }
+
+  nav {
+    margin: 2rem;
+  }
+
+  #menu {
+    justify-content: flex-start;
+    gap: var(--espacio-md);
+  }
+
+  .btn-contactanos {
+    margin-bottom: 0;
+  }
+
+  /* Pie en fila con envoltura */
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--espacio-5);
+    text-align: left;
+  }
+
+  .Marca {
+    padding: 1rem 2rem;
+    flex: 1 1 100%;
+  }
+  .Contacto {
+    padding: 1.5rem;
+  }
+  .Horario {
+    padding: 1.5rem;
+  }
+
+  /* Tablas normales */
+  table {
+    display: table;
+    overflow: hidden;
+  }
+
+  thead th,
+  tbody th {
+    padding: 12px 16px;
+  }
+
+  td {
+    padding: 10px 16px;
+  }
+
+  /* Secciones en fila */
+  .quienes-somos,
+  .alquilar,
+  .horario {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nuestros-servicios {
+    flex-direction: row;
+    justify-content: left;
+    gap: 2rem;
+  }
+
+  #whatsapp img {
+    width: 4.5rem;
+  }
+
+  /* Imágenes (tableta) */
+  .flota article img,
+  .rutas article img {
+    align-self: flex-start;
+  }
+
+  .rutas article img {
+    max-width: 14rem;
+  }
+
+  .quienes-somos img,
+  .nuestros-servicios img,
+  .alquilar img {
+    width: 14rem;
+    max-width: 14rem;
+    flex-shrink: 0;
+  }
+
+  .tarjeta,
+  .tarjetaServicios {
+    padding: var(--espacio-md);
+  }
+
+  /* Flota y rutas en 2 columnas */
+  .flota,
+  .rutas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Portada */
+  .portada {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem 0 3rem;
+    min-height: 90vh;
+  }
+
+  /* Formulario */
+  .form1 {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  fieldset {
+    padding: 1.5rem;
+  }
+}
+
+/* =========================================================
+   COMPUTADOR  (≥ 1024px)  -> valores del diseño original
+   ========================================================= */
+@media (min-width: 64rem) {
+  main {
+    padding: 1rem 2rem;
+    margin: 5rem 2rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .encabezado img {
+    width: 200px;
+  }
+
+  nav {
+    margin: 4rem;
+  }
+
+  footer {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .Marca {
+    flex: 0 1 auto;
+    padding: 1rem 5rem;
+  }
+  .Contacto {
+    padding: 3rem;
+  }
+  .Horario {
+    padding: 2rem 9rem;
+  }
+
+  #whatsapp img {
+    width: 5rem;
+  }
+
+  /* Imágenes (computador): tamaños originales */
+  .rutas article img {
+    max-width: 18.75rem;
+  }
+
+  .quienes-somos img,
+  .nuestros-servicios img,
+  .alquilar img {
+    width: 18.75rem;
+    max-width: 18.75rem;
+  }
+
+  /* Flota y rutas automáticas */
+  .flota,
+  .rutas {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  /* Portada */
+  .portada {
+    padding: 0 4rem 0 5rem;
+    min-height: 100vh;
+  }
+
+  /* Formulario en dos columnas */
+  .formulario {
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}
