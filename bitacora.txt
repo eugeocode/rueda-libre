@@ -93,3 +93,4 @@ toda semana uno acabo en la version 3.0
 
 Hoy Martes 3 de noviembre me encargue de el header y el footer, todos repartidos en secciones para que los flex los organizara en distintos lugares y formas
 
+entonces 5 de noviembre termine de ajustar el formulario de la reserva con ayuda de ia ya que me quedaba feo esteticamente
