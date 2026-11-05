@@ -38,6 +38,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .encabezado {
   flex-direction: column;
   text-align: center;
@@ -360,3 +361,4 @@ fieldset {
   border-radius: 8px;
   box-sizing: border-box;
 }
+
