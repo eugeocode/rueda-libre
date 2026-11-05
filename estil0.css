@@ -1,10 +1,3 @@
-/* =========================================================
-   RUEDA LIBRE - CSS mobile first
-   Base = teléfono. Luego se amplía con:
-   - Tableta:     min-width: 48rem  (768px)
-   - Computador:  min-width: 64rem  (1024px)
-   ========================================================= */
-
 :root {
   --fuente-titulos: "Montserrat", Arial, sans-serif;
   --fuente-texto: "Open Sans", sans-serif;
@@ -25,18 +18,15 @@
   --espacio-6: 3rem;
 }
 
-/* ---------- Base (teléfono) ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* ---------- Imágenes (teléfono) ----------
-   Antes tenían width/height en el HTML; ahora el tamaño lo controla el CSS.
-   Se mantienen cuadradas como en el diseño original (200x200, 300x300, 100x100). */
-
-/* Flota: 200x200 */
 .flota article img {
   width: 100%;
   max-width: 12.5rem;
@@ -45,26 +35,23 @@ img {
   align-self: center;
 }
 
-/* Rutas: 300x300 */
 .rutas article img {
   width: 100%;
-  max-width: 18.75rem;
+  max-width: 12.5rem;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   align-self: center;
 }
 
-/* Quiénes somos, servicios y cómo alquilar: 300x300 */
 .quienes-somos img,
 .nuestros-servicios img,
 .alquilar img {
   width: 100%;
-  max-width: 18.75rem;
+  max-width: 12.5rem;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
-/* Reloj del horario: 100x100 */
 .Horario img {
   width: 6.25rem;
   aspect-ratio: 1 / 1;
@@ -81,9 +68,10 @@ body {
 }
 
 main {
-  padding: 1rem;
+  padding: 1.5rem; 
   max-width: 100rem;
-  margin: 2rem 0;
+  margin: 2rem auto; 
+  width: 100%;
 }
 
 h1,
@@ -97,7 +85,6 @@ h1 {
   font-size: 1.6rem;
 }
 
-/* ---------- Encabezado ---------- */
 
 header {
   color: var(--color-crema);
@@ -107,6 +94,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 1rem 0;
 }
 
 .encabezado {
@@ -161,33 +149,21 @@ nav {
   outline-offset: 4px;
 }
 
-/* ---------- Botones ---------- */
 
-.btn-reservar {
-  background-color: #1e7a4f;
-  color: #faf6ef;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-.btn-reservar:hover {
-  background-color: #1e7a4f;
-}
-.btn-reservar:focus {
-  outline: 3px dashed #f39a2b;
-  outline-offset: 4px;
-}
-
+.btn-reservar,
 .btn-tarifas {
   background-color: #1e7a4f;
   color: #faf6ef;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
+  display: inline-block;
 }
+.btn-reservar:hover,
 .btn-tarifas:hover {
   background-color: #1e7a4f;
 }
+.btn-reservar:focus,
 .btn-tarifas:focus {
   outline: 3px dashed #f39a2b;
   outline-offset: 4px;
@@ -196,10 +172,9 @@ nav {
 .btn-contactanos {
   background-color: #fffba8;
   color: #1e7a4f;
-  padding: 5px 2px;
+  padding: 8px 12px;
   border-radius: 5px;
   text-decoration: none;
-  height: 40px;
   margin-bottom: 1rem;
 }
 .btn-contactanos:hover {
@@ -217,11 +192,6 @@ textarea:focus {
   border-color: transparent;
 }
 
-.p {
-  padding: 10px 25px;
-}
-
-/* ---------- Pie de página ---------- */
 
 footer {
   display: flex;
@@ -230,7 +200,6 @@ footer {
   background-color: #1e7a4f;
   justify-content: space-between;
   align-items: center;
-
   gap: var(--espacio-3);
   margin-top: var(--espacio-6);
   padding: var(--espacio-4) 0;
@@ -238,18 +207,10 @@ footer {
   text-align: center;
 }
 
-.Marca {
+.Marca, .Contacto, .Horario {
+  padding: 1rem;
   flex-wrap: wrap;
-  padding: 1rem;
 }
-.Contacto {
-  padding: 1rem;
-}
-.Horario {
-  padding: 1rem;
-}
-
-/* ---------- Tablas ---------- */
 
 table {
   display: block;
@@ -297,8 +258,6 @@ tbody tr:hover th {
   background-color: #915080;
 }
 
-/* ---------- Secciones en fila (apiladas en teléfono) ---------- */
-
 .quienes-somos,
 .nuestros-servicios,
 .alquilar,
@@ -306,14 +265,21 @@ tbody tr:hover th {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.nuestros-servicios ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .nuestros-servicios {
   justify-content: left;
 }
-
-/* ---------- WhatsApp ---------- */
 
 #whatsapp {
   position: fixed;
@@ -325,9 +291,8 @@ tbody tr:hover th {
   width: 3.5rem;
 }
 
-/* ---------- Tarjetas ---------- */
-
-.tarjeta {
+.tarjeta,
+.tarjetaServicios {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -341,23 +306,11 @@ tbody tr:hover th {
   color: #333333;
 }
 
-.tarjetaServicios {
-  position: relative;
-  flex: 1 1 16rem;
-  min-width: 0;
-  padding: var(--espacio-3);
-  border: 1px solid var(--color-gris-asfalto);
-  border-radius: 0.75rem;
-  background-color: var(--color-crema);
-}
-
-/* ---------- Flota y rutas (1 columna en teléfono) ---------- */
-
 .flota,
 .rutas {
   display: grid;
   grid-template-columns: 1fr;
-}
+  gap: 1.5rem; 
 
 .flota article,
 .rutas article {
@@ -365,34 +318,25 @@ tbody tr:hover th {
   flex-direction: column;
 }
 
-/* ---------- Portada ---------- */
-
 .portada {
   background-color: #F8F4ED;
   color: #333333;
   justify-content: space-between;
-
   background-image: url(img/Portada.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-
-  padding: 2rem 1rem;
-  box-sizing: border-box;
-
+  padding: 2rem 1.5rem;
   width: 100%;
-  min-height: 80vh;
+  min-height: 50vh;
 }
 
 .portada div {
   max-width: 500px;
 }
-
-/* ---------- Enlaces ---------- */
 
 a,
 a:visited {
@@ -401,8 +345,6 @@ a:visited {
 a:hover {
   color: #237B52;
 }
-
-/* ---------- Formulario (1 columna en teléfono) ---------- */
 
 .formulario {
   display: grid;
@@ -414,7 +356,7 @@ a:hover {
 .form1 {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -430,11 +372,10 @@ a:hover {
 .formulario select,
 .formulario textarea {
   width: 100%;
-  padding: 0.6rem;
+  padding: 0.8rem;
   margin-top: 0.3rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
 .formulario input[type="radio"],
@@ -446,29 +387,25 @@ a:hover {
 
 fieldset {
   min-width: 0;
-  padding: 1rem;
+  padding: 1.5rem;
   border: 1px solid var(--color-crema);
   border-radius: 8px;
-  box-sizing: border-box;
 }
 
-/* =========================================================
-   TABLETA  (≥ 768px)
-   ========================================================= */
 @media (min-width: 48rem) {
   main {
     padding: 1rem 1.5rem;
-    margin: 3rem 1.5rem;
+    margin: 3rem auto;
   }
 
   h1 {
     font-size: 2rem;
   }
 
-  /* Encabezado en fila */
   header {
     flex-direction: row;
     justify-content: space-between;
+    padding: 1rem 2rem;
   }
 
   .encabezado img {
@@ -492,7 +429,6 @@ fieldset {
     margin-bottom: 0;
   }
 
-  /* Pie en fila con envoltura */
   footer {
     flex-direction: row;
     flex-wrap: wrap;
@@ -505,14 +441,7 @@ fieldset {
     padding: 1rem 2rem;
     flex: 1 1 100%;
   }
-  .Contacto {
-    padding: 1.5rem;
-  }
-  .Horario {
-    padding: 1.5rem;
-  }
 
-  /* Tablas normales */
   table {
     display: table;
     overflow: hidden;
@@ -527,7 +456,6 @@ fieldset {
     padding: 10px 16px;
   }
 
-  /* Secciones en fila */
   .quienes-somos,
   .alquilar,
   .horario {
@@ -546,7 +474,6 @@ fieldset {
     width: 4.5rem;
   }
 
-  /* Imágenes (tableta) */
   .flota article img,
   .rutas article img {
     align-self: flex-start;
@@ -569,37 +496,26 @@ fieldset {
     padding: var(--espacio-md);
   }
 
-  /* Flota y rutas en 2 columnas */
   .flota,
   .rutas {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Portada */
   .portada {
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem 0 3rem;
     min-height: 90vh;
   }
 
-  /* Formulario */
   .form1 {
     flex-direction: row;
-    gap: 1rem;
-  }
-
-  fieldset {
-    padding: 1.5rem;
   }
 }
 
-/* =========================================================
-   COMPUTADOR  (≥ 1024px)  -> valores del diseño original
-   ========================================================= */
 @media (min-width: 64rem) {
   main {
     padding: 1rem 2rem;
-    margin: 5rem 2rem;
+    margin: 5rem auto;
   }
 
   h1 {
@@ -634,7 +550,6 @@ fieldset {
     width: 5rem;
   }
 
-  /* Imágenes (computador): tamaños originales */
   .rutas article img {
     max-width: 18.75rem;
   }
@@ -646,21 +561,19 @@ fieldset {
     max-width: 18.75rem;
   }
 
-  /* Flota y rutas automáticas */
   .flota,
   .rutas {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
-  /* Portada */
   .portada {
     padding: 0 4rem 0 5rem;
     min-height: 100vh;
   }
 
-  /* Formulario en dos columnas */
   .formulario {
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
   }
+}
 }
