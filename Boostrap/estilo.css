@@ -1,0 +1,14 @@
+:root {
+  --verde: #403f2b;
+  --amarillo: #f3f1c4;
+}
+body {
+  background-color: #403f2b;
+  color: #f3f1c4;
+}
+.bg-amarillo {
+  background-color: var(--amarillo) !important;
+}
+.text-verde {
+  color: var(--verde) !important;
+}
