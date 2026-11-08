@@ -12,3 +12,6 @@ body {
 .text-verde {
   color: var(--verde) !important;
 }
+.border-amarillo {
+  border-color: #f3f1c4 !important;
+}
