@@ -15,3 +15,7 @@ body {
 .border-amarillo {
   border-color: #f3f1c4 !important;
 }
+
+.bg-ofic {
+  background-image: url(img_Boostrap/planta-oficina.jpg);
+}
