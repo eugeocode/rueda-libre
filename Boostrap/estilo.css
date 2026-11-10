@@ -19,3 +19,26 @@ body {
 .bg-ofic {
   background-image: url(img_Boostrap/planta-oficina.jpg);
 }
+
+/* Flechas del carrusel de escritorio por fuera de las fotos */
+.carrusel-flecha-fuera.carousel-control-prev {
+  margin-left: -3rem;
+}
+.carrusel-flecha-fuera.carousel-control-next {
+  margin-right: -3rem;
+}
+
+/* Carrusel de celular: flechas sobre la foto con fondo oscuro para que se vean */
+.carrusel-flecha-movil {
+  height: 350px;
+  padding: 0 0.5rem;
+  opacity: 1;
+}
+.carrusel-flecha-movil .carousel-control-prev-icon,
+.carrusel-flecha-movil .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+  background-size: 55%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
